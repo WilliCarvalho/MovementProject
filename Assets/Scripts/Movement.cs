@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class Movement : MonoBehaviour
 {
+    public float velocity;
     // Start is called before the first frame update
     void Start()
     {
@@ -14,7 +15,6 @@ public class Movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float velocity = 10;
         float moveX = Input.GetAxis("Horizontal") * Time.deltaTime * velocity;
         float moveZ = Input.GetAxis("Vertical") * Time.deltaTime * velocity;
         transform.Translate(moveX, 0, moveZ);
